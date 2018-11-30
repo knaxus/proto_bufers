@@ -1,0 +1,40 @@
+// Tell that you're using protobuff3
+syntax = "proto3";
+
+/*
+* Person is a resource for your application
+*/
+
+/*
+* Note: There is nothing like optional/required fields in PROTO v3
+*/
+
+/* 
+* Each field should contain a tag 1,2,3...
+* fields are identified using tag names not filed names
+*/
+message Person {
+  // using 32-bit integer to store age
+  int32 age = 1; // defaults to 0
+  
+  // string to store first and last name
+  // defaults to empty string if not provided
+  string first_name = 2; 
+  string last_name = 3;
+
+  // byte to store binary data, small image file here
+  // defaults to empty bytes
+  byte small_image = 4;
+
+  // height of the person using 32-bit decimal value
+  // defaults to 0
+  float height = 5;
+
+  // boolean to store verification status
+  // defaults to false
+  bool is_verified = 6;
+
+  // list of string type phone numbers
+  // defaults to empty list of string 
+  repeated string phone_numbers = 7;
+}
