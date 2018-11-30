@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+// create a namespace for this package
+package MyPackage;
+
 // data of type date
 message Date {
   int32 year = 1;

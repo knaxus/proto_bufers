@@ -8,6 +8,9 @@ syntax = "proto3";
 
 import "proto_bufers/_Date.proto";
 
+// defining a namespa for person as well
+package Person;
+
 message Person {
   // using 32-bit integer to store age
   int32 age = 1; // defaults to 0
@@ -56,6 +59,6 @@ message Person {
 
   // user can have multiple addresses
   repeated Address addresses = 9;
-  // importing from package MyPackage
+  // because it is defined inside a package MyPackage
   MyPackage. Date birthday = 10;
 }
