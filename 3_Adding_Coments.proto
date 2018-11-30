@@ -1,0 +1,26 @@
+// Tell that you're using protobuff3
+syntax = "proto3";
+
+/*
+* Person is a resource for your application
+*/
+
+/* 
+* Each field should contain a tag 1,2,3...
+* fields are identified using tag names not filed names
+*/
+message Person {
+  // using 32-bit integer to store age
+  int32 age = 1;
+  // string to store first and last name
+  string first_name = 2;
+  string last_name = 3;
+  // byte to store binary data, small image file here
+  byte small_image = 4;
+  // height of the person using 32-bit decimal value
+  float height = 5;
+  // boolean to store verification status
+  bool is_verified = 6;
+  // list of string type phone numbers
+  repeated string phone_numbers = 7;
+}
