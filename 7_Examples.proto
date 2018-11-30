@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+// data of type date
+message Date {
+  int32 year = 1;
+  int32 month = 2;
+  int32 year = 3;
+}
+
+// Data containing latitude and longitude
+message LatLong {
+  double latitude =1;
+  double longitude = 2;
+}
+
+// define money ex - USD 32.45
+message Money {
+  string currency_code = 1;
+  int32 integral_value = 2;
+  float decimal_value = 3;
+}
+
+// Define enum of days in a week
+enum DaysOfWeek {
+  UNDEFINED = 0;
+  MONDAY = 1;
+  TUESDAY = 2;
+  WEDNESDAY = 3;
+  THRUSDAY = 4;
+  FRIDAY = 5;
+  SATURDAY = 6;
+  SUNDAY = 7;
+}
